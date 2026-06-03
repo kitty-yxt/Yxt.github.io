@@ -1,71 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>游戏陪玩单价表 · 商品详情大图展示</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, 'Segoe UI', 'Poppins', sans-serif; }
-        body { background: #f5f7fb; color: #1e293b; }
+<!DOCTYPE html>   < !DOCTYPE html>
+<html   超文本标记语言 lang   朗   朗="zh-CN"   "zh-CN">
+<head   头>
+    <meta   元 charset   字符集   字符集="UTF-8"   "UTF-8">
+    <meta   元 name   名字   名字="viewport"   "viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title   标题>游戏陪玩单价表 · 商品详情大图展示</   & lt;title>
+    <style   风格>
+        * { margin   保证金   保证金: 0; padding   填充: 0; box-sizing: border-box; font-family   字体类型   字体类型: system-ui, 'Segoe UI'   “Segoe UI”, 'Poppins'   “此外,”, sans-serif; }
+        body   身体 { background   背景   背景: #f5f7fb; color   颜色   颜色: #1e293b; }
         .hero-banner {
-            width: 100%;
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 3rem 2rem;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s;
+            width   宽度   宽度: 100%;
+            background-size: cover   封面;
+            background-position   背景位置   背景位置: center   中心;
+            color   颜色   颜色: white   白色;
+            padding   填充   填充: 3rem   快速眼动 2rem   快速眼动   快速眼动;
+            position   位置   位置: relative   相对;
+            overflow   溢出   溢出: hidden   隐藏的;
+            transition   过渡   过渡: all   所有 0.3s   年代;
         }
-        .hero-banner::before {
-            font-size: 220px;
-            position: absolute;
-            right: -30px;
-            bottom: -40px;
-            opacity: 0.12;
-            pointer-events: none;
+        .hero-banner::before   之前 {
+            font-size   字体大小   字体大小: 220px;
+            position   位置   位置: absolute   绝对;
+            right   正确的   正确的: -30px;
+            bottom   底   底: -40px;
+            opacity   不透明度   不透明度: 0.12;
+            pointer-events: none   无;
             z-index: 1;
         }
-        .banner-content { max-width: 1300px; margin: 0 auto; position: relative; z-index: 2; }
-        .hero-banner h1 { font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, #FFD966, #FFB347); background-clip: text; -webkit-background-clip: text; color: transparent; }
-        .hero-banner p { font-size: 1.2rem; margin-top: 1rem; opacity: 0.9; max-width: 550px; }
-        .hero-banner .price-tag { margin-top: 1.5rem; display: inline-block; background: rgba(0,0,0,0.4); backdrop-filter: blur(8px); padding: 0.5rem 1.2rem; border-radius: 40px; }
+        .banner-content { max-width: 1300px; margin   保证金   保证金: 0 auto   汽车   汽车; position   位置   位置: relative   相对   相对; z-index: 2; }
+        .hero-banner h1 { font-size   字体大小   字体大小: 3rem   快速眼动   快速眼动; font-weight   粗细   粗细: 800; background   背景: linear-gradient   线性渐变(135deg, #FFD966, #FFB347); background-clip: text; -webkit-background-clip: text; color   颜色   颜色: transparent; }
+        .hero-banner p { font-size   字体大小   字体大小: 1.2rem   快速眼动   快速眼动; margin-top: 1rem   快速眼动; opacity   不透明度   不透明度: 0.9; max-width: 550px; }
+        .hero-banner .price-tag   身价 { margin-top: 1.5rem   快速眼动; display   显示   显示: inline-block; background   背景   背景: rgba(0,0,0,0.4); backdrop-filter: blur   模糊(8px); padding   填充   填充: 0.5rem   快速眼动   快速眼动 1.2rem   快速眼动   快速眼动; border-radius   这个特性   这个特性: 40px; }
         .admin-bar {
-            background: #111827;
-            color: #f9fafb;
-            padding: 0.7rem 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            border-bottom: 2px solid #facc15;
+            background   背景   背景: #111827;
+            color   颜色   颜色: #f9fafb;
+            padding   填充   填充: 0.7rem   快速眼动   快速眼动 1.5rem   快速眼动   快速眼动;
+            display   显示   显示: flex;
+            justify-content: space-between   之间的空间;
+            align-items   对齐项目   对齐项目: center   中心;
+            flex-wrap: wrap   包装;
+            gap   差距   差距: 10px;
+            border-bottom   边界底部: 2px   边界底部 solid   固体   固体   固体 #facc15;
         }
-        .admin-badge { background: #facc15; color: #111827; padding: 4px 12px; border-radius: 30px; font-weight: bold; font-size: 0.75rem; }
-        button { background: none; border: none; cursor: pointer; transition: 0.2s; }
-        .btn-outline-light { background: transparent; border: 1px solid #9ca3af; padding: 5px 14px; border-radius: 30px; color: #e5e7eb; }
-        .btn-outline-light:hover { background: #374151; border-color: #facc15; }
+        .admin-badge { background   背景   背景: #facc15; color   颜色   颜色: #111827; padding   填充   填充: 4px 12px; border-radius   这个特性: 30px; font-weight   粗细: bold   大胆的; font-size   字体大小   字体大小: 0.75rem   快速眼动   粗细; }
+        button { background   背景   背景: none   无   无; border: none   无; cursor: pointer; transition   过渡   过渡: 0.2s   年代   年代; }
+        .btn-outline-light { background   背景   背景: transparent   透明的; border: 1px solid   固体   固体 #9ca3af; padding   填充   填充: 5px 14px; border-radius   这个特性: 30px; color   颜色   颜色: #e5e7eb; }
+        .btn-outline-light:hover { background   背景   背景: #374151; border-color   边框颜色: #facc15; }
         .floating-admin-panel {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 420px;
+            position   位置   位置: fixed;
+            bottom   底   底: 80px;
+            right   正确的   正确的: 20px;
+            width   宽度   宽度: 420px;
             max-width: calc(100vw - 40px);
-            background: #1f2937;
-            border-radius: 28px;
+            background   背景   背景: #1f2937;
+            border-radius   这个特性: 28px;
             box-shadow: 0 20px 35px -8px rgba(0,0,0,0.4);
             z-index: 1200;
-            backdrop-filter: blur(4px);
-            border: 1px solid #facc15;
-            color: #f1f5f9;
+            backdrop-filter: blur(4   模糊px);
+            border: 1px solid   固体   固体 #facc15;
+            color   颜色   颜色: #f1f5f9;
         }
-        .panel-header { background: #0f172a; padding: 12px 20px; border-radius: 28px 28px 0 0; font-weight: bold; display: flex; justify-content: space-between; cursor: pointer; border-bottom: 1px solid #facc15; }
-        .panel-content { padding: 16px; max-height: 500px; overflow-y: auto; }
-        .panel-section { margin-bottom: 20px; border-bottom: 1px solid #334155; padding-bottom: 12px; }
-        .panel-section h4 { font-size: 0.9rem; margin-bottom: 10px; color: #facc15; }
-        .panel-section input, .panel-section textarea, .panel-section select { width: 100%; padding: 8px 10px; margin-top: 4px; margin-bottom: 8px; border-radius: 16px; border: none; background: #334155; color: white; }
-        .panel-section button { background: #facc15; color: #0f172a; padding: 6px 12px; border-radius: 40px; font-size: 0.75rem; font-weight: bold; margin-right: 6px; margin-top: 6px; }
-        .btn-danger { background: #dc2626 !important; color: white !important; }
+        .panel-header { background   背景   背景   背景: #0f172a; padding   填充   填充: 12px 20px; border-radius   这个特性: 28px 28px 0 0; font-weight   粗细   粗细: bold; display   显示   显示: flex; justify-content: space-between   之间的空间; cursor: pointer; border-bottom   边界底部: 1px   边界底部 solid   固体   固体   固体 #facc15; }
+        .panel-content { padding   填充   填充: 16px; max-height: 500px; overflow-y: auto   汽车; }
+        .panel-section { margin-bottom: 20px; border-bottom   边界底部   边界底部: 1px solid   固体   固体 #334155; padding-bottom: 12px; }
+        .panel-section h4 { font-size   字体大小   字体大小: 0.9rem   快速眼动   快速眼动; margin-bottom: 10px; color   颜色   颜色: #facc15; }
+        .panel-section input, .panel-section textarea, .panel-section select { width   宽度   宽度: 100%; padding   填充   填充: 8px 10px; margin-top: 4px; margin-bottom: 8px; border-radius   这个特性: 16px; border: none   无; background   背景   背景: #334155; color   颜色   颜色: white   白色; }
+        .panel-section button { background   背景   背景: #facc15; color   颜色   颜色: #0f172a; padding   填充   填充: 6px 12px; border-radius   这个特性: 40px; font-size   字体大小   字体大小: 0.75rem   快速眼动; font-weight   粗细   快速眼动: bold; margin-right   粗细: 6px; margin-top: 6px; }
+        .btn-danger { background   背景   背景: #dc2626 !important; color   颜色   颜色: white   白色   白色 !important; }
         .btn-sm { font-size: 0.7rem; padding: 4px 8px; }
         .category-item, .product-item { background: #111827; padding: 8px; margin-bottom: 8px; border-radius: 16px; }
         .flex-between { display: flex; justify-content: space-between; align-items: center; }
